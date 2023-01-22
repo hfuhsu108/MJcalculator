@@ -19,7 +19,16 @@ function recordNumber() {
   var newCell1 = newRow.insertCell(0);
   var newCell2 = newRow.insertCell(1);
   newCell1.innerHTML = inputNum;
-  newCell2.innerHTML = now.getFullYear() + '/' + (now.getMonth() + 1) + '/' + now.getDate() + ' ' + now.getHours() + ':' + now.getMinutes();
+  //輸出時間    
+  var time = now.toLocaleString('en-US', { 
+    year: 'numeric', 
+    month: '2-digit', 
+    day: '2-digit', 
+    hour: '2-digit', 
+    minute: '2-digit',
+    hour12: false
+  });
+    newCell2.innerHTML = time;
     }
   //清除輸入框
     document.getElementById("inputNumber").value = "";
