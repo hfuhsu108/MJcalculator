@@ -21,6 +21,8 @@ function recordNumber() {
   newCell1.innerHTML = inputNum;
   newCell2.innerHTML = now.getFullYear() + '/' + (now.getMonth() + 1) + '/' + now.getDate() + ' ' + now.getHours() + ':' + now.getMinutes();
     }
+  //清除輸入框
+    document.getElementById("inputNumber").value = "";
 }
 
 
