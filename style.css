@@ -31,8 +31,19 @@ p, th, td {
     color: #000000;
     font-weight: bold;
 }
+.blueBtn.active {
+    background-color: #056099;
+    color: #000000;
+    font-weight: bold;
+}
+
 .redBtn {
     background-color: #ff0000;
+    color: #ffffff;
+    font-weight: bold;
+}
+.redBtn.active {
+    background-color: #8b0000;
     color: #ffffff;
     font-weight: bold;
 }
