@@ -57,13 +57,17 @@ input[type="number"]::-webkit-inner-spin-button {
 /*手機上自動放大*/
 @media (max-width: 768px) {
     body {
-        font-size: 10em;
+        font-size: 1.5em;
         line-height: 1.2;
     }
+    input[type="number"] {
+        font-size: 1em;
+        width: 88%;
+    }
     #recordTable {
-        width: 100%;
+        width: 90%;
     }
     .bigBtn {
-        width: 100%;
+        width: 90%;
     }
 }
