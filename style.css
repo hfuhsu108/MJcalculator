@@ -17,6 +17,7 @@ form, p {
 /*文字變大*/
 p, th, td {
   font-size: 20px;
+  text-align: center;
 }
 /*設定按鈕大小*/
 
