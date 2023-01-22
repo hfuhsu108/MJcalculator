@@ -20,15 +20,17 @@ function recordNumber() {
   var newCell2 = newRow.insertCell(1);
   newCell1.innerHTML = inputNum;
   //輸出時間    
-  var time = now.toLocaleString('en-US', { 
+  var time = now.toISOString('en-US', { 
     year: 'numeric', 
     month: '2-digit', 
     day: '2-digit', 
     hour: '2-digit', 
     minute: '2-digit',
-    hour12: false
-  });
-    newCell2.innerHTML = time;
+    hour12: false,
+  })
+    var date = new Date(time);
+    var formattedDate = date.getFullYear() + '/' + (date.getMonth() + 1).toString().padStart(2, 0) + '/' + date.getDate().toString().padStart(2, 0);
+    newCell2.innerHTML = formattedDate + " " + date.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit',hour12: false});
     }
   //清除輸入框
     document.getElementById("inputNumber").value = "";
@@ -73,3 +75,11 @@ document.getElementById("clearBtn").addEventListener("click", function(){
     recordTable.deleteRow(1);
   }
 });
+
+//改變按鈕顏色
+function changeButtonColor(button) {
+    button.classList.add("active");
+    setTimeout(function() {
+        button.classList.remove("active");
+    }, 200);
+}
