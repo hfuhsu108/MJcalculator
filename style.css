@@ -1,0 +1,56 @@
+/* 設定整頁面置中 */
+body {
+    text-align: center;
+}
+/*設定form, p 置中*/
+form, p {
+    margin: 0 auto;
+    /* 或是使用 */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+}
+/*設定表格置中*/
+#recordTable{
+    margin: 0 auto;
+}
+/*文字變大*/
+p, th, td {
+  font-size: 20px;
+}
+/*設定按鈕大小*/
+
+.bigBtn {
+    padding: 5px 20px;
+    font-size: 20px;
+  margin-bottom: 10px;
+}
+/*設定按鈕顏色*/
+.blueBtn {
+    background-color: #87CEFA;
+    color: #000000;
+    font-weight: bold;
+}
+.redBtn {
+    background-color: #ff0000;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/*輸入框大小*/
+input {
+  height: 40px;
+  width: 250px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: ;
+    -moz-appearance: textfield;
+    height: 40px;
+    width: 40px;
+}
+
+
+#recordTable th {
+    border-bottom: 1px solid black;
+}
