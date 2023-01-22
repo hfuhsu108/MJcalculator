@@ -61,7 +61,7 @@ input[type="number"]::-webkit-inner-spin-button {
         line-height: 1.2;
     }
     input[type="number"] {
-        font-size: 2.5em;
+        font-size: 2em;
         width: 88%;
         height: 100%;
     }
@@ -70,7 +70,7 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: ;
     -moz-appearance: textfield;
     height: 1.5em;
-    width: 2.5em;
+    width: 1.2em;
   }
     #recordTable {
         width: 90%;
