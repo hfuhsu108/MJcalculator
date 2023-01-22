@@ -1,12 +1,15 @@
 // 儲存輸入的數字和時間
 var numbers = [];
 
-// 紀錄按鈕
-document.getElementById("recordBtn").addEventListener("click", function(){
-  //取得當前時間
+//紀錄數字副程式
+function recordNumber() {
+    //取得當前時間
   var now = new Date();
   //取得使用者輸入的數字
   var inputNum = document.getElementById("inputNumber").value;
+  if (isNaN(inputNum)) {
+        alert("請輸入數字");
+    } else {
   //將使用者輸入的數字和時間存入陣列中
   numbers.push({number: inputNum, time: now});
   // 將資料新增至表格中
@@ -16,7 +19,20 @@ document.getElementById("recordBtn").addEventListener("click", function(){
   var newCell2 = newRow.insertCell(1);
   newCell1.innerHTML = inputNum;
   newCell2.innerHTML = now.getFullYear() + '/' + (now.getMonth() + 1) + '/' + now.getDate() + ' ' + now.getHours() + ':' + now.getMinutes();
+    }
+}
+
+
+// 紀錄按鈕
+document.getElementById("recordBtn").addEventListener("click", function(){
+    recordNumber();
 });
+document.getElementById("inputNumber").addEventListener("keydown", function(event){
+    if(event.keyCode === 13) {
+        recordNumber();
+    }
+});
+
 
 // 加總按鈕
 document.getElementById("addBtn").addEventListener("click", function(){
