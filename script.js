@@ -7,7 +7,8 @@ function recordNumber() {
   var now = new Date();
   //取得使用者輸入的數字
   var inputNum = document.getElementById("inputNumber").value;
-  if (isNaN(inputNum)) {
+  var pattern = /^-?\d+\.?\d*$/;
+    if (!pattern.test(inputNum)) {
         alert("請輸入數字");
     } else {
   //將使用者輸入的數字和時間存入陣列中
@@ -29,6 +30,7 @@ document.getElementById("recordBtn").addEventListener("click", function(){
 });
 document.getElementById("inputNumber").addEventListener("keydown", function(event){
     if(event.keyCode === 13) {
+      event.preventDefault()
         recordNumber();
     }
 });
